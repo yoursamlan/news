@@ -241,7 +241,7 @@ body {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	color: #fff;
+	color: #fff !important;
 	padding: 1em;
 }
 
@@ -478,7 +478,6 @@ body {
 
 	.caption .content {
 		padding: 1em;
-		color: var(--font2);
 	}
 }
 
@@ -520,5 +519,6 @@ body {
 
 a {
 	text-decoration: none;
+	color: #fff !important;
 	color: ver(--font1);
 }
