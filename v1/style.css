@@ -13,7 +13,7 @@
 	font-family: "Playfair Display SC";
 	font-size: 2.5em;
 	font-weight: 700;
-	background: #000;
+	background: #013;
 	color: #fff;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -31,6 +31,10 @@
 .accordion .item .content {
 	display: none;
 	background: #125;
+	background: rgba(17, 34, 85, 0.7);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
 }
 
 .subhead {
@@ -73,6 +77,10 @@ body {
 	max-width: 1600px;
 	margin: 0 auto;
 	/*padding: 0.5em;*/
+}
+
+#newsctr {
+	margin: 5em auto;
 }
 
 .news .post {
@@ -455,9 +463,34 @@ body {
 	}
 }
 
+
+
+
+
 .heroheader {
 	position: fixed !important;
 	width: 100%;
 	z-index: 9999;
 	top: 0;
+}
+
+.menu {
+	align-content: center;
+	align-items: center;
+	margin: auto;
+	padding: 1em;
+}
+
+.option {
+	background: none;
+	color: #fff;
+	padding: 7px 15px;
+	margin: 5px 0;
+	border: 1px solid white;
+	border-radius: 0px;
+	font-size: 1em;
+}
+
+.option:hover {
+	background: #19368d;
 }

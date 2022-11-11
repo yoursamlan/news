@@ -33,31 +33,35 @@ $(document).ready(function () {
 	});
 });
 
-fetch("https://inshorts.deta.dev/news?category=business")
-	.then((res) => res.json()) // parse response as JSON
-	.then((data) => {
-		//console.log(data.data);
-		art = "";
-		for (i = 0; i < 25; i++) {
-			n = i;
-			sart =
-				'<article class="post"><div class="media" style="background-image: url(' +
-				data.data[n].imageUrl +
-				');"></div><div class="caption"><h1 class="title">' +
-				data.data[n].title +
-				'</h1><div class="content">' +
-				data.data[n].content +
-				"</div></div></article>";
-			art += sart;
-		}
-		document.getElementById("newsctr").innerHTML = art;
 
-		//document.querySelector('p').innerHTML = data.data[n].content;
-	})
-	.catch((err) => {
-		console.log(`error ${err}`);
-	});
+function load(cat) {
+	fetch("https://inshorts.deta.dev/news?category=" + cat)
+		.then((res) => res.json()) // parse response as JSON
+		.then((data) => {
+			//console.log(data.data);
+			art = "";
+			for (i = 0; i < 25; i++) {
+				n = i;
+				sart =
+					'<article class="post"><div class="media" style="background-image: url(' +
+					data.data[n].imageUrl +
+					');"></div><div class="caption"><h1 class="title">' +
+					data.data[n].title +
+					'</h1><div class="content">' +
+					data.data[n].content +
+					"</div></div></article>";
+				art += sart;
+			}
+			document.getElementById("newsctr").innerHTML = art;
 
+			//document.querySelector('p').innerHTML = data.data[n].content;
+		})
+		.catch((err) => {
+			console.log(`error ${err}`);
+		});
+}
+
+load("all");
 
 var objToday = new Date(),
 	weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
