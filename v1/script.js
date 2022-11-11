@@ -47,7 +47,7 @@ function load(cat) {
 					data.data[n].imageUrl +
 					');"></div><div class="caption"><h1 class="title">' +
 					data.data[n].title +
-					'</h1><div class="content">' +
+					'</h1><div class="content"><div class="time">' + data.data[n].date + " &nbsp;" + data.data[n].time + "</div>" +
 					data.data[n].content +
 					"</div></div></article>";
 				art += sart;
