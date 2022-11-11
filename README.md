@@ -2,6 +2,8 @@
 
 A responsive NEWS webapp
 
+[Click here to open](https://yoursamlan.github.io/news)
+
 ---
 
 
