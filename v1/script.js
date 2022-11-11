@@ -38,9 +38,9 @@ function load(cat) {
 	fetch("https://inshorts.deta.dev/news?category=" + cat)
 		.then((res) => res.json()) // parse response as JSON
 		.then((data) => {
-			//console.log(data.data);
+			console.log(data.data.length);
 			art = "";
-			for (i = 0; i < 25; i++) {
+			for (i = 0; i < data.data.length; i++) {
 				n = i;
 				sart =
 					'<article class="post"><div class="media" style="background-image: url(' +
