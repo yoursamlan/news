@@ -7,16 +7,19 @@
 }
 
 :root {
-	--bg: #222;
-	--font1: #fff;
-	--font2: #bbb;
+	--bg: #edece8;
+	/*#222*/
+	--font1: #000;
+	/*#fff*/
+	--font2: #555;
+	/*#bbb*/
 }
 
 .accordion .item .heading {
 	text-align: center;
 	padding: 0.25em 0 0.25em 0;
 	font-family: "Playfair Display SC";
-	font-size: 2.5em;
+	font-size: 2.2em;
 	font-weight: 700;
 	background: #013;
 	color: #fff;
@@ -44,7 +47,7 @@
 
 .subhead {
 	text-align: center;
-	color: #fff;
+	color: #fff !important;
 	font-size: 1em;
 	padding: 0.5em;
 }

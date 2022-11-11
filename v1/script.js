@@ -76,7 +76,7 @@ var objToday = new Date(),
 	months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
 	curMonth = months[objToday.getMonth()],
 	curYear = objToday.getFullYear();
-var today = dayOfWeek + ", " + curMonth + " " + dayOfMonth + ", " + curYear;
+var today = dayOfWeek + ", " + curMonth + " " + dayOfMonth + ", " + curYear + " &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; &copy Amlan Saha Kundu, 2022";
 
 document.getElementById("today").innerHTML = today;
 
