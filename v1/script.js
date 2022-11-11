@@ -57,3 +57,40 @@ fetch("https://inshorts.deta.dev/news?category=business")
 	.catch((err) => {
 		console.log(`error ${err}`);
 	});
+
+
+var objToday = new Date(),
+	weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
+	dayOfWeek = weekday[objToday.getDay()],
+	domEnder = function () {
+		var a = objToday;
+		if (/1/.test(parseInt((a + "").charAt(0)))) return "";
+		a = parseInt((a + "").charAt(1));
+		return 1 == a //? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th"
+	}(),
+	dayOfMonth = today + (objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
+	months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
+	curMonth = months[objToday.getMonth()],
+	curYear = objToday.getFullYear();
+var today = dayOfWeek + ", " + curMonth + " " + dayOfMonth + ", " + curYear;
+
+document.getElementById("today").innerHTML = today;
+
+
+
+
+$('.accordion .item .heading').click(function () {
+
+	var a = $(this).closest('.item');
+	var b = $(a).hasClass('open');
+	var c = $(a).closest('.accordion').find('.open');
+
+	if (b != true) {
+		$(c).find('.content').slideUp(200);
+		$(c).removeClass('open');
+	}
+
+	$(a).toggleClass('open');
+	$(a).find('.content').slideToggle(200);
+
+});

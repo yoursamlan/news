@@ -6,16 +6,43 @@
 	font-family: Lora, sans-serif;
 }
 
-.header {
-	position: sticky;
-	top: 0;
-	z-index: 9999;
-	
+
+.accordion .item .heading {
+	text-align: center;
+	padding: 0.25em 0 0.25em 0;
+	font-family: "Playfair Display SC";
+	font-size: 2.5em;
+	font-weight: 700;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+	box-sizing: border-box;
 }
 
-.header>h1 {
+.accordion .item.open .heading,
+.accordion .item:last-child .heading {
+	border: 0;
+}
+
+.accordion .item.open .heading {
+	background-position: right 20px top -5px;
+}
+
+.accordion .item .content {
+	display: none;
+	background: #125;
+}
+
+.subhead {
 	text-align: center;
-	padding: 0.25em;
+	color: #fff;
+	font-size: 1em;
+	padding: 0.5em;
+}
+
+.header > h1 {
+	text-align: center;
+	padding: 0.25em 0 0.25em 0;
 	font-family: "Playfair Display SC";
 	font-size: 2.5em;
 	font-weight: 700;
@@ -426,4 +453,11 @@ body {
 		padding: 1em;
 		color: #555;
 	}
+}
+
+.heroheader {
+	position: fixed !important;
+	width: 100%;
+	z-index: 9999;
+	top: 0;
 }
