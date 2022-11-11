@@ -45,9 +45,9 @@ function load(cat) {
 				sart =
 					'<article class="post"><div class="media" style="background-image: url(' +
 					data.data[n].imageUrl +
-					');"></div><div class="caption"><h1 class="title">' +
+					');"></div><div class="caption"><a target="_blank" href="' + data.data[n].readMoreUrl + '"><h1 class="title">' +
 					data.data[n].title +
-					'</h1><div class="content"><div class="time">' + data.data[n].date + " &nbsp;" + data.data[n].time + "</div>" +
+					'</h1></a><div class="content"><div class="time">' + data.data[n].date + " &nbsp;" + data.data[n].time + "</div>" +
 					data.data[n].content +
 					"</div></div></article>";
 				art += sart;

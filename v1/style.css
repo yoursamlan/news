@@ -6,6 +6,11 @@
 	font-family: Lora, sans-serif;
 }
 
+:root {
+	--bg: #222;
+	--font1: #fff;
+	--font2: #bbb;
+}
 
 .accordion .item .heading {
 	text-align: center;
@@ -66,6 +71,8 @@ h6 {
 
 body {
 	margin: 0;
+	color: var(--font1);
+	background: var(--bg);
 }
 
 .news {
@@ -87,7 +94,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 1em;
-	border: 1px solid #000;
+	border: 1px solid var(--font2);
 }
 
 .news .post:nth-child(1) {
@@ -190,12 +197,16 @@ body {
 	grid-column-end: span 9;
 }
 
+.title {
+	color: var(--font1);
+}
+
 .news .post .media {
 	display: block;
 	flex: 1 1 auto;
 	background-size: cover;
 	background-position: center;
-	background-color: #ddd;
+	background-color: #111;
 }
 
 .news .post .caption {
@@ -210,6 +221,12 @@ body {
 .news .post .caption .content {
 	padding: 1em;
 }
+
+.content {
+	color: var(--font2);
+}
+
+
 
 .news .post.overlaid {
 	position: relative;
@@ -453,13 +470,12 @@ body {
 
 	.caption .title {
 		padding: 0;
-		color: #000;
 		font-size: 1.5em;
 	}
 
 	.caption .content {
 		padding: 1em;
-		color: #555;
+		color: var(--font2);
 	}
 }
 
@@ -497,4 +513,9 @@ body {
 
 .option:hover {
 	background: #19368d;
+}
+
+a {
+	text-decoration: none;
+	color: ver(--font1);
 }
